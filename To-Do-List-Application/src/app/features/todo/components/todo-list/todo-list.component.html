@@ -1,0 +1,31 @@
+<header class="app-header">
+  <div class="header-content">
+    <div class="logo">
+      <img src="assets/images/logo.png"class="header-logo">
+    </div>
+  </div>
+</header>
+<div class="todo-container">
+  <app-add-todo />
+  <div class="filters">
+    @for (filter of filterTypes; track filter) {
+      <button 
+        (click)="setFilter(filter)"
+        class="filter-btn"
+        [class.active]="filter === currentFilter"
+      >
+        {{ filter | titlecase }}
+      </button>
+    }
+  </div>
+
+  <div class="todo-list">
+    @for (todo of todos$ | async; track todo.id) {
+      <app-todo-item
+        [todo]="todo"
+        (toggleComplete)="onToggleComplete($event)"
+        (deleteTodo)="onDeleteTodo($event)"
+      />
+    }
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="dialog-container" [@dialogEntrance]> 
+  <mat-dialog-content [@contentAnimation] [@shake]="isShaking">
+    <div class="confirmation-content">
+      <p class="confirmation-text">
+        Are you sure you want to delete
+      </p>
+      <p class="todo-title">"{{ data.todoTitle }}"</p>
+      <p class="warning-text">
+        This action cannot be undone
+      </p>
+    </div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions>
+    <div class="button-container" [@buttonsAnimation]>
+      <button 
+        mat-flat-button
+        class="action-btn cancel-btn"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+      <button 
+        mat-flat-button
+        class="action-btn delete-btn"
+        (click)="onConfirm()"
+      >
+        Delete
+      </button>
+    </div>
+  </mat-dialog-actions>
+</div>

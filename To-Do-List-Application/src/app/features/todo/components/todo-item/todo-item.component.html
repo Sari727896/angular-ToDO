@@ -1,0 +1,17 @@
+<div class="todo-item" [class.completed]="todo.completed">
+  <div class="checkbox-wrapper">
+    <input 
+      type="checkbox" 
+      [checked]="todo.completed"
+      (change)="onToggle()"
+    >
+  </div>
+  <div class="todo-content">
+    <div class="title">{{ todo.title }}</div>
+    @if (todo.description) {
+      <div class="description">{{ todo.description }}</div>
+    }
+  </div>
+  <button class="delete-btn" (click)="onDelete()">
+    <mat-icon>delete_outline</mat-icon>  </button>
+</div>
