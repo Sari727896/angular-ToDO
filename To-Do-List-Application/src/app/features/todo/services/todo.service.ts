@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Todo } from '../models/todo.interface';
 import { selectAllTodos, selectFilteredTodos } from '../store/todo.selectors';
 import { TodoActions } from '../store/todo.actions';
+import { FilterType } from '../models/filter-type.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +32,7 @@ export class TodoService {
     this.store.dispatch(TodoActions.deleteTodo({ id }));
   }
 
-  setFilter(filterType: 'all' | 'incomplete' | 'completed'): void {
+  setFilter(filterType:FilterType): void {
     this.store.dispatch(TodoActions.setFilter({ filterType }));
   }
 }

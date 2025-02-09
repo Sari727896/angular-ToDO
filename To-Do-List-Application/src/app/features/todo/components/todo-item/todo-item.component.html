@@ -1,17 +1,18 @@
-<div class="todo-item" [class.completed]="todo.completed">
-  <div class="checkbox-wrapper">
-    <input 
-      type="checkbox" 
-      [checked]="todo.completed"
-      (change)="onToggle()"
-    >
-  </div>
+<div class="todo-item">
+  <mat-checkbox
+    [checked]="todo.completed"
+    (change)="onToggle()"
+    color="primary">
+  </mat-checkbox>
+  
   <div class="todo-content">
-    <div class="title">{{ todo.title }}</div>
+    <p [class.completed]="todo.completed">{{ todo.title }}</p>
     @if (todo.description) {
-      <div class="description">{{ todo.description }}</div>
+      <p class="description" [class.completed]="todo.completed">{{ todo.description }}</p>
     }
   </div>
-  <button class="delete-btn" (click)="onDelete()">
-    <mat-icon>delete_outline</mat-icon>  </button>
+  
+  <button mat-icon-button (click)="onDelete()">
+    <mat-icon >delete_outline</mat-icon>
+  </button>
 </div>

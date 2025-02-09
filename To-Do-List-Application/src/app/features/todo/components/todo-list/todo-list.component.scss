@@ -1,0 +1,41 @@
+@import '../../../../styles/variables';
+
+.todo-container {
+  max-width: 800px;
+  margin: 0 auto;  
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.filter-group {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+:host ::ng-deep {
+  .mat-button-toggle-group {
+    border: none;
+    border-radius: 9999px;
+  }
+
+  .mat-button-toggle {
+    background: transparent;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 9999px;
+    margin: 0 4px;
+
+    &-checked {
+      background: $primary-color;
+      color: white;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

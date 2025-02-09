@@ -1,0 +1,30 @@
+{
+    "TODO": {
+      "FORM": {
+        "TITLE": {
+          "LABEL": "Todo title",
+          "PLACEHOLDER": "What needs to be done?",
+          "ERRORS": {
+            "REQUIRED": "Title is required",
+            "MIN_LENGTH": "Title must be at least 3 characters"
+          }
+        },
+        "DESCRIPTION": {
+          "LABEL": "Description",
+          "PLACEHOLDER": "Description (optional)"
+        },
+        "SUBMIT": "Add Task"
+      },
+      "FILTERS": {
+        "ALL": "All",
+        "INCOMPLETE": "Incomplete",
+        "COMPLETED": "Completed"
+      },
+      "DELETE_DIALOG": {
+        "TITLE": "Are you sure you want to delete",
+        "WARNING": "This action cannot be undone",
+        "CANCEL": "Cancel",
+        "CONFIRM": "Delete"
+      }
+    }
+  }

@@ -1,0 +1,30 @@
+{
+    "TODO": {
+      "FORM": {
+        "TITLE": {
+          "LABEL": "Titre de la tâche",
+          "PLACEHOLDER": "Que faut-il faire ?",
+          "ERRORS": {
+            "REQUIRED": "Le titre est requis",
+            "MIN_LENGTH": "Le titre doit contenir au moins 3 caractères"
+          }
+        },
+        "DESCRIPTION": {
+          "LABEL": "Description",
+          "PLACEHOLDER": "Description (optionnelle)"
+        },
+        "SUBMIT": "Ajouter la tâche"
+      },
+      "FILTERS": {
+        "ALL": "Tout",
+        "INCOMPLETE": "Non terminé",
+        "COMPLETED": "Terminé"
+      },
+      "DELETE_DIALOG": {
+        "TITLE": "Êtes-vous sûr de vouloir supprimer",
+        "WARNING": "Cette action ne peut pas être annulée",
+        "CANCEL": "Annuler",
+        "CONFIRM": "Supprimer"
+      }
+    }
+  }

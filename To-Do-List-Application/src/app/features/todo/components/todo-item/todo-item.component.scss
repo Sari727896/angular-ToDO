@@ -1,0 +1,62 @@
+@import '../../../../styles/variables';
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  border: none;
+  transition: background-color 0.2s;
+  background: white;
+  border-radius: $border-radius-md;
+  margin-bottom: 8px;
+  box-shadow: $box-shadow-sm;
+
+  &:hover {
+    background: $gray-100;
+  }
+}
+
+.todo-content {
+  margin: 0 16px;
+  flex: 1;
+
+  p {
+    margin: 0;
+    word-break: break-word;
+  }
+}
+
+.description {
+  font-size: 14px;
+  color: $gray-500;
+  margin-top: 4px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: $gray-400;
+}
+
+:host ::ng-deep {
+  .mdc-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .mdc-checkbox__background {
+      border-radius: 50%;
+      border: 2px solid $indigo-500 !important;
+      background-color: white;
+    }
+
+    &__native-control:enabled:checked ~ .mdc-checkbox__background {
+      border-color: $indigo-500 !important;
+    }
+
+    &::before,
+    &::after {
+      background-color: transparent !important;
+    }
+  }
+}

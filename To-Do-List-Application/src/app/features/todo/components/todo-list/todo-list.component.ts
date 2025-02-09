@@ -5,24 +5,32 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { AddTodoComponent } from '../add-todo/add-todo.component';
 import { Observable } from 'rxjs';
 import { Todo } from '../../models/todo.interface';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { FilterType } from '../../models/filter-type.enum';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
+
+
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
-  imports: [CommonModule, AsyncPipe, TodoItemComponent, AddTodoComponent],
+  imports: [CommonModule, AsyncPipe, TodoItemComponent, AddTodoComponent, MatButtonToggleModule,TranslateModule,    LanguageSwitcherComponent,
+    MatCardModule],
   templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.css',
+  styleUrl: './todo-list.component.scss',
 })
 export class TodoListComponent {
-  filterTypes = ['all', 'incomplete', 'completed'] as const;
+  filterTypes = [FilterType.ALL, FilterType.INCOMPLETE, FilterType.COMPLETED];
   todos$: Observable<Todo[]>;
-  currentFilter: 'all' | 'incomplete' | 'completed' = 'all';
+  currentFilter: FilterType = FilterType.ALL;
 
   constructor(private todoService: TodoService) {
     this.todos$ = this.todoService.getFilteredTodos();
   }
 
-  setFilter(type: 'all' | 'incomplete' | 'completed'): void {
+  setFilter(type:FilterType): void {
     this.currentFilter = type;
     this.todoService.setFilter(type);
   }

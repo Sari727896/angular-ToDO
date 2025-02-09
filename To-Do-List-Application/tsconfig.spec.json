@@ -2,7 +2,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": ["jest", "node"],
+    "types": [
+      "jest",
+      "node",
+      "@angular/localize"
+    ],
     "esModuleInterop": true
   },
   "include": [

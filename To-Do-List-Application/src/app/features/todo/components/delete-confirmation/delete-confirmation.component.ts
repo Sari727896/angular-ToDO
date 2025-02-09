@@ -13,6 +13,7 @@ import {
   buttonsAnimation,
   shakeAnimation,
 } from '../../animations/dialog.animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface DialogData {
   todoTitle: string;
@@ -21,9 +22,10 @@ interface DialogData {
 @Component({
   selector: 'app-delete-confirmation',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, MatDialogModule, MatButtonModule, MatIconModule,TranslateModule
+  ],
   templateUrl: './delete-confirmation.component.html',
-  styleUrl: './delete-confirmation.component.css',
+  styleUrl: './delete-confirmation.component.scss',
   animations: [
     dialogEntrance,
     contentAnimation,

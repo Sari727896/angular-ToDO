@@ -1,16 +1,23 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../../models/todo.interface';
 import { CommonModule } from '@angular/common';
-import { MatDialog } from '@angular/material/dialog';
 import { DeleteConfirmationComponent } from '../delete-confirmation/delete-confirmation.component';
-import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialog } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
+
 
 @Component({
   selector: 'app-todo-item',
-  imports: [CommonModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule,  MatCardModule,    MatListModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule],
   templateUrl: './todo-item.component.html',
-  styleUrl: './todo-item.component.css',
+  styleUrl: './todo-item.component.scss',
 })
 export class TodoItemComponent {
   @Input() todo!: Todo;

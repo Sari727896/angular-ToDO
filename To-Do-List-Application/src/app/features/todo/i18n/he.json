@@ -1,0 +1,30 @@
+{
+    "TODO": {
+      "FORM": {
+        "TITLE": {
+          "LABEL": "כותרת המשימה",
+          "PLACEHOLDER": "מה צריך לעשות?",
+          "ERRORS": {
+            "REQUIRED": "חובה להזין כותרת",
+            "MIN_LENGTH": "הכותרת חייבת להכיל לפחות 3 תווים"
+          }
+        },
+        "DESCRIPTION": {
+          "LABEL": "תיאור",
+          "PLACEHOLDER": "תיאור (לא חובה)"
+        },
+        "SUBMIT": "הוסף משימה"
+      },
+      "FILTERS": {
+        "ALL": "הכל",
+        "INCOMPLETE": "לא הושלם",
+        "COMPLETED": "הושלם"
+      },
+      "DELETE_DIALOG": {
+        "TITLE": "האם אתה בטוח שברצונך למחוק",
+        "WARNING": "לא ניתן לבטל פעולה זו",
+        "CANCEL": "ביטול",
+        "CONFIRM": "מחק"
+      }
+    }
+  }

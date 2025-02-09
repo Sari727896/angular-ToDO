@@ -1,0 +1,57 @@
+@import '../../../../styles/variables';
+
+.add-todo-form {
+  background: white;
+  border-radius: $border-radius-lg;
+  padding: 50px;
+  box-shadow: $box-shadow-md;
+  margin: 0 auto; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep {
+  .mat-mdc-flat-button.mat-primary {
+    background-color: $primary-color;
+    
+    &:disabled {
+      background-color: $gray-200;
+    }
+  }
+
+  .mat-mdc-form-field-outline {
+    border-radius: $border-radius-md;
+  }
+
+  .mat-mdc-text-field-wrapper,
+  .mat-mdc-form-field-focus-overlay {
+    background: #f8fafc;
+  }
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 24px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  background-color: $primary-color !important; // Force primary color
+  color: white !important; // Ensure text is white
+
+  &:disabled {
+    background-color: $gray-200 !important;
+    color: rgba(0, 0, 0, 0.38) !important;
+  }
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}

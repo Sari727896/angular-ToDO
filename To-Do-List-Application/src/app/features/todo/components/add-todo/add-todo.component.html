@@ -1,29 +1,35 @@
 <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="add-todo-form">
   <div class="form-group">
-    <input 
-      type="text"
-      formControlName="title"
-      placeholder="Todo title"
-      class="form-control"
-    >
-    @if (todoForm.get('title')?.errors?.['required'] && todoForm.get('title')?.touched) {
-      <div class="error-message">Title is required</div>
-    }
-    @if (todoForm.get('title')?.errors?.['minlength'] && todoForm.get('title')?.touched) {
-      <div class="error-message">Title must be at least 3 characters</div>
-    }
+    <mat-form-field appearance="outline" class="form-control">
+      <mat-label>{{ 'TODO.FORM.TITLE.LABEL' | translate }}</mat-label>
+      <input matInput formControlName="title" [placeholder]="'TODO.FORM.TITLE.PLACEHOLDER' | translate">
+      @if (todoForm.get('title')?.errors?.['required'] && todoForm.get('title')?.touched) {
+        <mat-error>{{ 'TODO.FORM.TITLE.ERRORS.REQUIRED' | translate }}</mat-error>
+      }
+      @if (todoForm.get('title')?.errors?.['minlength'] && todoForm.get('title')?.touched) {
+        <mat-error>{{ 'TODO.FORM.TITLE.ERRORS.MIN_LENGTH' | translate }}</mat-error>
+      }
+    </mat-form-field>
   </div>
+
   <div class="form-group">
-    <textarea
-      formControlName="description"
-      placeholder="Description (optional)"
-      class="form-control"
-    ></textarea>
+    <mat-form-field appearance="outline" class="form-control">
+      <mat-label>{{ 'TODO.FORM.DESCRIPTION.LABEL' | translate }}</mat-label>
+      <textarea matInput formControlName="description" 
+      [placeholder]="'TODO.FORM.DESCRIPTION.PLACEHOLDER' | translate"
+      rows="3"></textarea>
+    </mat-form-field>
   </div>
+
   <div class="form-group">
-  <button type="submit"[disabled]="todoForm.invalid"class="submit-btn">
-    <span class="icon">+</span>
-    Add Task
-  </button>
+    <button 
+  mat-flat-button 
+  color="primary"
+  type="submit"
+  [disabled]="todoForm.invalid" 
+  class="submit-btn">
+  <mat-icon>add</mat-icon>
+  {{ 'TODO.FORM.SUBMIT' | translate }}
+</button>
   </div>
 </form>
