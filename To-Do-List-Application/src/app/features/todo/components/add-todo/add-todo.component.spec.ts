@@ -3,7 +3,10 @@ import { AddTodoComponent } from './add-todo.component';
 import { TodoService } from '../../services/todo.service';
 import { provideMockStore } from '@ngrx/store/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { TranslateModule, TranslateStore, TranslateService } from '@ngx-translate/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 describe('AddTodoComponent', () => {
   let component: AddTodoComponent;
   let fixture: ComponentFixture<AddTodoComponent>;
@@ -11,9 +14,15 @@ describe('AddTodoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddTodoComponent, ReactiveFormsModule],
+      imports: [AddTodoComponent, ReactiveFormsModule,
+        TranslateModule.forRoot(),
+        NoopAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule],
       providers: [
         TodoService,
+        TranslateStore,
+        TranslateService,
         provideMockStore({
           initialState: {
             todos: {

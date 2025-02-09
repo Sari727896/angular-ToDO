@@ -3,6 +3,7 @@ import { DeleteConfirmationComponent } from './delete-confirmation.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
 
 describe('DeleteConfirmationComponent', () => {
   let component: DeleteConfirmationComponent;
@@ -14,8 +15,11 @@ describe('DeleteConfirmationComponent', () => {
         DeleteConfirmationComponent,
         NoopAnimationsModule,
         MatDialogModule,
+        TranslateModule.forRoot()
       ],
       providers: [
+        TranslateStore,
+        TranslateService,
         { provide: MatDialogRef, useValue: { close: jest.fn() } },
         { provide: MAT_DIALOG_DATA, useValue: { todoTitle: 'Test Todo' } },
       ],

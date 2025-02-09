@@ -5,6 +5,15 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { AddTodoComponent } from '../add-todo/add-todo.component';
 import { BehaviorSubject } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import { FilterType } from '../../models/filter-type.enum';
+import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { TranslationService } from '../../services/translation.service';
+class MockTranslationService {
+  setLanguage() {}
+  instant() { return ''; }
+}
 
 describe('TodoListComponent', () => {
   let component: TodoListComponent;
@@ -24,8 +33,15 @@ describe('TodoListComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [TodoListComponent, TodoItemComponent, AddTodoComponent],
-      providers: [{ provide: TodoService, useValue: todoServiceMock }],
+      imports: [TodoListComponent, TodoItemComponent, AddTodoComponent,TranslateModule.forRoot(),
+        NoopAnimationsModule,
+        MatButtonToggleModule],
+        providers: [
+          { provide: TodoService, useValue: todoServiceMock },
+          TranslateStore,
+          TranslateService,
+          TranslationService
+        ],
     }).compileComponents();
 
     todoService = TestBed.inject(TodoService);
@@ -47,10 +63,9 @@ describe('TodoListComponent', () => {
   });
 
   it('should call setFilter with correct type', () => {
-    const filterButtons = fixture.debugElement.queryAll(By.css('.filter-btn'));
-    filterButtons[1].nativeElement.click();
-    expect(todoService.setFilter).toHaveBeenCalledWith('incomplete');
-  });
+    component.setFilter(FilterType.INCOMPLETE);
+    expect(todoService.setFilter).toHaveBeenCalledWith(FilterType.INCOMPLETE);
+});
 
   it('should handle todo completion toggle', () => {
     component.onToggleComplete(1);

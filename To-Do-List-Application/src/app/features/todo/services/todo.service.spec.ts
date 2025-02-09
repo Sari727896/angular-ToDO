@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { TodoActions } from '../store/todo.actions';
 import { selectAllTodos, selectFilteredTodos } from '../store/todo.selectors';
+import { FilterType } from '../models/filter-type.enum';
 
 describe('TodoService', () => {
   let service: TodoService;
@@ -92,10 +93,10 @@ describe('TodoService', () => {
   describe('setFilter', () => {
     it('should dispatch setFilter action', () => {
       const spy = jest.spyOn(store, 'dispatch');
-      service.setFilter('completed');
+      service.setFilter(FilterType.COMPLETED);
 
       expect(spy).toHaveBeenCalledWith(
-        TodoActions.setFilter({ filterType: 'completed' })
+        TodoActions.setFilter({ filterType: FilterType.COMPLETED })
       );
     });
   });
