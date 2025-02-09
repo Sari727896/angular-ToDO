@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="nav-header">
+    <div class="nav-actions">
+      <a mat-button routerLink="/todos" routerLinkActive="active">
+        <mat-icon>list</mat-icon>
+        {{ 'NAV.TODOS' | translate }}
+      </a>
+      <a mat-button routerLink="/todos/new" routerLinkActive="active">
+        <mat-icon>add</mat-icon>
+        {{ 'NAV.ADD_TODO' | translate }}
+      </a>
+      <app-language-switcher />
+    </div>
+  </mat-toolbar>

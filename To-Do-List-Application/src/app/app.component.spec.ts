@@ -1,7 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BehaviorSubject } from 'rxjs';
 import { By } from '@angular/platform-browser';
-import { TranslateModule, TranslateStore, TranslateService } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateStore,
+  TranslateService,
+} from '@ngx-translate/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TodoListComponent } from './features/todo/components/todo-list/todo-list.component';
@@ -30,18 +34,18 @@ describe('TodoListComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [
-        TodoListComponent, 
-        TodoItemComponent, 
+        TodoListComponent,
+        TodoItemComponent,
         AddTodoComponent,
         TranslateModule.forRoot(),
         NoopAnimationsModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
       ],
       providers: [
         { provide: TodoService, useValue: todoServiceMock },
         TranslateService,
         TranslateStore,
-        TranslationService
+        TranslationService,
       ],
     }).compileComponents();
 

@@ -1,5 +1,5 @@
 export enum FilterType {
-    ALL = 'all',
-    INCOMPLETE = 'incomplete',
-    COMPLETED = 'completed'
-  }
+  ALL = 'all',
+  INCOMPLETE = 'incomplete',
+  COMPLETED = 'completed',
+}

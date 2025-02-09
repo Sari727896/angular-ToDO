@@ -1,31 +1,28 @@
-<header class="app-header">
-  <div class="header-content">
-    <div class="logo">
-      <img src="assets/images/logo.png"class="header-logo">
-    </div>
-    <app-language-switcher />
-  </div>
-</header>
 <div class="todo-container">
-  <app-add-todo />
+  <div class="todo-header">
+    <h1>{{ 'TODO.LIST.TITLE' | translate }}</h1>
+  </div>
+
   <mat-button-toggle-group
-  [value]="currentFilter"
-  (change)="setFilter($event.value)"
-  class="filter-group">
-  @for (filter of filterTypes; track filter) {
-    <mat-button-toggle [value]="filter">
-      {{ 'TODO.FILTERS.' + filter.toUpperCase() | translate }}
-    </mat-button-toggle>
-  }
-</mat-button-toggle-group>
+    [value]="currentFilter"
+    (change)="setFilter($event.value)"
+    class="filter-group">
+    @for (filter of filterTypes; track filter) {
+      <mat-button-toggle [value]="filter">
+        {{ 'TODO.FILTERS.' + filter.toUpperCase() | translate }}
+      </mat-button-toggle>
+    }
+  </mat-button-toggle-group>
 
   <div class="todo-list">
-    @for (todo of todos$ | async; track todo.id) {
-      <app-todo-item
-        [todo]="todo"
-        (toggleComplete)="onToggleComplete($event)"
-        (deleteTodo)="onDeleteTodo($event)"
-      />
-    }
+    @if ((todos$ | async)?.length) {
+      @for (todo of todos$ | async; track todo.id) {
+        <app-todo-item
+          [todo]="todo"
+          (toggleComplete)="onToggleComplete($event)"
+          (deleteTodo)="onDeleteTodo($event)"
+        />
+      }
+      } 
   </div>
 </div>

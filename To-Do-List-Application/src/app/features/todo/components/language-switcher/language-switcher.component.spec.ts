@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LanguageSwitcherComponent } from './language-switcher.component';
-import { TranslateModule, TranslateStore, TranslateService } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateStore,
+  TranslateService,
+} from '@ngx-translate/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { TranslationService } from '../../services/translation.service';
@@ -15,13 +19,9 @@ describe('LanguageSwitcherComponent', () => {
         LanguageSwitcherComponent,
         TranslateModule.forRoot(),
         NoopAnimationsModule,
-        MatSelectModule
+        MatSelectModule,
       ],
-      providers: [
-        TranslateStore,
-        TranslateService,
-        TranslationService
-      ]
+      providers: [TranslateStore, TranslateService, TranslationService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LanguageSwitcherComponent);

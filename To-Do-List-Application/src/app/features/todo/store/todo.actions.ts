@@ -7,6 +7,6 @@ export const TodoActions = createActionGroup({
     'Add Todo': props<{ title: string; description?: string }>(),
     'Toggle Todo': props<{ id: number }>(),
     'Delete Todo': props<{ id: number }>(),
-    'Set Filter': props<{ filterType:FilterType}>(),
+    'Set Filter': props<{ filterType: FilterType }>(),
   },
 });

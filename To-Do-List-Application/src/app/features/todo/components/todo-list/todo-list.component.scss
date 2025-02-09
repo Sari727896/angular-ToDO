@@ -1,7 +1,7 @@
 @import '../../../../styles/variables';
 
 .todo-container {
-  max-width: 800px;
+ max-width: 1000px;
   margin: 0 auto;  
   padding: 20px;
   font-family: system-ui, -apple-system, sans-serif;
@@ -38,4 +38,8 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+h1{
+  color: $primary-color;
+  margin-left: 410px;
 }

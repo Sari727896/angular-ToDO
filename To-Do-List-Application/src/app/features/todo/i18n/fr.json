@@ -1,30 +1,40 @@
 {
-    "TODO": {
-      "FORM": {
-        "TITLE": {
-          "LABEL": "Titre de la tâche",
-          "PLACEHOLDER": "Que faut-il faire ?",
-          "ERRORS": {
-            "REQUIRED": "Le titre est requis",
-            "MIN_LENGTH": "Le titre doit contenir au moins 3 caractères"
-          }
-        },
-        "DESCRIPTION": {
-          "LABEL": "Description",
-          "PLACEHOLDER": "Description (optionnelle)"
-        },
-        "SUBMIT": "Ajouter la tâche"
+  "NAV": {
+    "TODOS": "Mes tâches",
+    "ADD_TODO": "Nouvelle tâche"
+  },
+  "TODO": {
+    "LIST": {
+      "TITLE": "Ma liste de tâches",
+      "EMPTY": "Aucune tâche pour le moment",
+      "ADD_FIRST": "Ajouter votre première tâche"
+    },
+    "FORM": {
+      "TITLE": {
+        "LABEL": "Titre de la tâche",
+        "PLACEHOLDER": "Que faut-il faire ?",
+        "ERRORS": {
+          "REQUIRED": "Le titre est requis",
+          "MIN_LENGTH": "Le titre doit contenir au moins 3 caractères"
+        }
       },
-      "FILTERS": {
-        "ALL": "Tout",
-        "INCOMPLETE": "Non terminé",
-        "COMPLETED": "Terminé"
+      "DESCRIPTION": {
+        "LABEL": "Description",
+        "PLACEHOLDER": "Description (optionnelle)"
       },
-      "DELETE_DIALOG": {
-        "TITLE": "Êtes-vous sûr de vouloir supprimer",
-        "WARNING": "Cette action ne peut pas être annulée",
-        "CANCEL": "Annuler",
-        "CONFIRM": "Supprimer"
-      }
+      "SUBMIT": "Ajouter la tâche",
+      "CANCEL": "Annuler"
+    },
+    "FILTERS": {
+      "ALL": "Tout",
+      "INCOMPLETE": "Non terminé",
+      "COMPLETED": "Terminé"
+    },
+    "DELETE_DIALOG": {
+      "TITLE": "Êtes-vous sûr de vouloir supprimer",
+      "WARNING": "Cette action ne peut pas être annulée",
+      "CANCEL": "Annuler",
+      "CONFIRM": "Supprimer"
     }
   }
+}

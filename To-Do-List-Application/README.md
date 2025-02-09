@@ -1,59 +1,117 @@
-# ToDoListApplication
+# Angular Todo List Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+A feature-rich Todo List application built with Angular 19, featuring animations, internationalization, and Material UI components.
 
-## Development server
+## Features
 
-To start a local development server, run:
+### Core Functionality
+- Create new todos with title and optional description
+- Mark todos as complete/incomplete
+- Delete todos with confirmation dialog
+- Filter todos by status (All/Complete/Incomplete)
+- Form validation for todo creation
+  - Required title with minimum 3 characters
+  - Optional description field
 
+### Enhanced Features
+- Smooth animations for all interactions
+  - Dialog entrance/exit animations
+  - Content transitions
+  - Delete confirmation shake effect
+- Multi-language support
+  - English (default)
+  - Hebrew (with RTL support)
+  - French
+- Sound effects for completing tasks
+
+## Technical Implementation
+
+### Components
+- `NavHeaderComponent`: Navigation bar with language switcher
+- `TodoListComponent`: Main todo list with filtering
+- `TodoItemComponent`: Individual todo item display
+- `AddTodoComponent`: Form for creating new todos
+- `DeleteConfirmationComponent`: Confirmation dialog for deletion
+- `LanguageSwitcherComponent`: Language selection dropdown
+
+### State Management & Services
+- NgRx Store implementation for todo state management
+  - Actions for all todo operations
+  - Reducers for state updates
+  - Effects for side effects
+  - Selectors for state queries
+- `TodoService`: Manages todo CRUD operations
+- `TranslationService`: Handles i18n functionality
+
+### Technologies Used
+- Angular 19
+- NgRx for state management
+- Angular Material
+- @angular/animations
+- @ngx-translate/core
+- Jest for testing
+
+## Setup and Running
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+4. Navigate to `http://localhost:4200`
+
+## Testing
+
+Run the test suite using:
 ```bash
-ng serve
+npm test
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Tests include:
+- Component creation tests
+- Service functionality tests
+- Translation functionality tests
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## Project Structure
+```
+src/
+├── app/
+│   ├── features/todo/
+│   │   ├── animations/
+│   │   ├── components/
+│   │   ├── i18n/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── store/
+│   │   └── styles/
+│   └── app.component.(html|scss|ts)
+└── public/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Requirements Fulfilled
 
-```bash
-ng generate --help
-```
+### Core Requirements ✓
+- [x] Component Creation (TodoList, TodoItem, AddTodo)
+- [x] CRUD Operations for Todos
+- [x] Filtering Functionality
+- [x] Angular Material UI Implementation
+- [x] Form Validation
+- [x] Unit Testing
 
-## Building
+### Bonus Features ✓
+- [x] NgRx State Management Implementation
+- [x] Animations for Adding/Removing Items
+- [x] Multi-language Support
+- [x] Enhanced UI/UX with Sound Effects
+- [x] Confirmation Dialogs
+- [x] RTL Support
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Notes
+- Built as part of an Angular coding assessment
+- Focuses on clean code architecture and best practices
+- Implements standalone components
+- Uses modern Angular features including control flow syntax

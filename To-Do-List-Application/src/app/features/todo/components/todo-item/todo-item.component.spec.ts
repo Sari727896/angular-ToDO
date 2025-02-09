@@ -1,7 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TodoItemComponent } from './todo-item.component';
 import { MatDialog } from '@angular/material/dialog';
-import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateService,
+  TranslateStore,
+} from '@ngx-translate/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,14 +16,18 @@ describe('TodoItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TodoItemComponent, TranslateModule.forRoot(),
+      imports: [
+        TodoItemComponent,
+        TranslateModule.forRoot(),
         MatCardModule,
         MatCheckboxModule,
-        NoopAnimationsModule],
+        NoopAnimationsModule,
+      ],
       providers: [
         TranslateStore,
         TranslateService,
-        { provide: MatDialog, useValue: { open: jest.fn() } }],
+        { provide: MatDialog, useValue: { open: jest.fn() } },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TodoItemComponent);

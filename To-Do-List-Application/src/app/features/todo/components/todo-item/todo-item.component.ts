@@ -9,13 +9,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
 
-
 @Component({
   selector: 'app-todo-item',
-  imports: [CommonModule,  MatCardModule,    MatListModule,
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatListModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatIconModule],
+    MatIconModule,
+  ],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.scss',
 })

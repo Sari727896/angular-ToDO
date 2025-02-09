@@ -1,0 +1,31 @@
+@import '../../../../styles/variables';
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-image: url('../../../../../assets/images/logo.png');
+  height: 150px;
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      
+      mat-icon {
+        margin-right: 4px;
+      }
+    }
+  }
+}

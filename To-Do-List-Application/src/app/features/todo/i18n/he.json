@@ -1,30 +1,40 @@
 {
-    "TODO": {
-      "FORM": {
-        "TITLE": {
-          "LABEL": "כותרת המשימה",
-          "PLACEHOLDER": "מה צריך לעשות?",
-          "ERRORS": {
-            "REQUIRED": "חובה להזין כותרת",
-            "MIN_LENGTH": "הכותרת חייבת להכיל לפחות 3 תווים"
-          }
-        },
-        "DESCRIPTION": {
-          "LABEL": "תיאור",
-          "PLACEHOLDER": "תיאור (לא חובה)"
-        },
-        "SUBMIT": "הוסף משימה"
+  "NAV": {
+    "TODOS": "המשימות שלי",
+    "ADD_TODO": "משימה חדשה"
+  },
+  "TODO": {
+    "LIST": {
+      "TITLE": "רשימת המשימות שלי",
+      "EMPTY": "אין משימות עדיין",
+      "ADD_FIRST": "הוסף את המשימה הראשונה שלך"
+    },
+    "FORM": {
+      "TITLE": {
+        "LABEL": "כותרת המשימה",
+        "PLACEHOLDER": "מה צריך לעשות?",
+        "ERRORS": {
+          "REQUIRED": "חובה להזין כותרת",
+          "MIN_LENGTH": "הכותרת חייבת להכיל לפחות 3 תווים"
+        }
       },
-      "FILTERS": {
-        "ALL": "הכל",
-        "INCOMPLETE": "לא הושלם",
-        "COMPLETED": "הושלם"
+      "DESCRIPTION": {
+        "LABEL": "תיאור",
+        "PLACEHOLDER": "תיאור (לא חובה)"
       },
-      "DELETE_DIALOG": {
-        "TITLE": "האם אתה בטוח שברצונך למחוק",
-        "WARNING": "לא ניתן לבטל פעולה זו",
-        "CANCEL": "ביטול",
-        "CONFIRM": "מחק"
-      }
+      "SUBMIT": "הוסף משימה",
+      "CANCEL": "ביטול"
+    },
+    "FILTERS": {
+      "ALL": "הכל",
+      "INCOMPLETE": "לא הושלם",
+      "COMPLETED": "הושלם"
+    },
+    "DELETE_DIALOG": {
+      "TITLE": "האם אתה בטוח שברצונך למחוק",
+      "WARNING": "לא ניתן לבטל פעולה זו",
+      "CANCEL": "ביטול",
+      "CONFIRM": "מחק"
     }
   }
+}

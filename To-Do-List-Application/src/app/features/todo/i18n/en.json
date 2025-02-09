@@ -1,30 +1,40 @@
 {
-    "TODO": {
-      "FORM": {
-        "TITLE": {
-          "LABEL": "Todo title",
-          "PLACEHOLDER": "What needs to be done?",
-          "ERRORS": {
-            "REQUIRED": "Title is required",
-            "MIN_LENGTH": "Title must be at least 3 characters"
-          }
-        },
-        "DESCRIPTION": {
-          "LABEL": "Description",
-          "PLACEHOLDER": "Description (optional)"
-        },
-        "SUBMIT": "Add Task"
+  "NAV": {
+    "TODOS": "My Todos",
+    "ADD_TODO": "New Todo"
+  },
+  "TODO": {
+    "LIST": {
+      "TITLE": "My Todo List",
+      "EMPTY": "No todos yet",
+      "ADD_FIRST": "Add your first todo"
+    },
+    "FORM": {
+      "TITLE": {
+        "LABEL": "Todo title",
+        "PLACEHOLDER": "What needs to be done?",
+        "ERRORS": {
+          "REQUIRED": "Title is required",
+          "MIN_LENGTH": "Title must be at least 3 characters"
+        }
       },
-      "FILTERS": {
-        "ALL": "All",
-        "INCOMPLETE": "Incomplete",
-        "COMPLETED": "Completed"
+      "DESCRIPTION": {
+        "LABEL": "Description",
+        "PLACEHOLDER": "Description (optional)"
       },
-      "DELETE_DIALOG": {
-        "TITLE": "Are you sure you want to delete",
-        "WARNING": "This action cannot be undone",
-        "CANCEL": "Cancel",
-        "CONFIRM": "Delete"
-      }
+      "SUBMIT": "Add Task",
+      "CANCEL": "Cancel"
+    },
+    "FILTERS": {
+      "ALL": "All",
+      "INCOMPLETE": "Incomplete",
+      "COMPLETED": "Completed"
+    },
+    "DELETE_DIALOG": {
+      "TITLE": "Are you sure you want to delete",
+      "WARNING": "This action cannot be undone",
+      "CANCEL": "Cancel",
+      "CONFIRM": "Delete"
     }
   }
+}

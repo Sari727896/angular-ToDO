@@ -22,7 +22,12 @@ interface DialogData {
 @Component({
   selector: 'app-delete-confirmation',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule, MatIconModule,TranslateModule
+  imports: [
+    CommonModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
+    TranslateModule,
   ],
   templateUrl: './delete-confirmation.component.html',
   styleUrl: './delete-confirmation.component.scss',

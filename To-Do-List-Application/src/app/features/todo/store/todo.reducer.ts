@@ -36,7 +36,7 @@ export const todoReducer = createReducer(
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newState.todos));
     return newState;
   }),
-  
+
   on(TodoActions.toggleTodo, (state, { id }) => {
     const todoToUpdate = state.todos.find((todo) => todo.id === id);
 

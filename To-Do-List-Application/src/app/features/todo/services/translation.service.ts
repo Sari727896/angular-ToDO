@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslationService {
   private currentLang = new BehaviorSubject<string>('en');
@@ -11,11 +11,12 @@ export class TranslationService {
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
-    
-    const browserLang = localStorage.getItem('preferredLanguage') || 
-                       translate.getBrowserLang() || 
-                       'en';
-    
+
+    const browserLang =
+      localStorage.getItem('preferredLanguage') ||
+      translate.getBrowserLang() ||
+      'en';
+
     this.setLanguage(browserLang);
     this.updateDocumentDirection(browserLang);
   }

@@ -32,7 +32,7 @@ export class TodoService {
     this.store.dispatch(TodoActions.deleteTodo({ id }));
   }
 
-  setFilter(filterType:FilterType): void {
+  setFilter(filterType: FilterType): void {
     this.store.dispatch(TodoActions.setFilter({ filterType }));
   }
 }
